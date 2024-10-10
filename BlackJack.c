@@ -21,13 +21,10 @@ int main(){
     do{
         printf("\nYou want to hit or stand?\n");
         scanf("%d", &go);
-
         switch(go){
-
             case 1: hit(); break;
             case 2: stay(); break;
             case 3: printf("GOODBYE!"); break;
-
             default: printf("Error! Try again:\n");
         }
     } while (go != 2 && go != 3);
@@ -41,7 +38,6 @@ int main(){
 }
 
 void hit(){
-
     n += 1;
 
     array = (int **)realloc(array, n * sizeof(int *));
@@ -81,7 +77,6 @@ void stay(){
     if(soma < 21){
         int dealerSum = (rand() % 11) + 15;
         printf("Dealer's sum is: %d \n", dealerSum);
-
         if(dealerSum == 21){
             printf("YOU LOSE!!!");
         }
